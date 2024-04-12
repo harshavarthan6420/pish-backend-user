@@ -10,7 +10,11 @@ mongoose.connect("mongodb+srv://user:user@users.h5esfgv.mongodb.net/?retryWrites
 .catch((err)=> console.log('Database not connected',err))
 
 app.use(express.json())
-
+const corsOptions = {
+    origin: ['http://localhost:3000', 'https://pish.onrender.com'], 
+    credentials: true,
+  };
+app.use(cors(corsOptions));
 app.use('/',require('./routes/authRoutes'))
 
 const port = 3002;
