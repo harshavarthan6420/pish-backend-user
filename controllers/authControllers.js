@@ -2,7 +2,6 @@ const { hashPassword, comparePassword } = require('../helpers/auth')
 const User =require('../models/User')
 const test=(req,res)=>{
     res.json('test is working')
-
 }
 //register page
 const registerUser=async (req,res)=>{
